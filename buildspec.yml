@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+      - docker build -t 727690074478.dkr.ecr.eu-north-1.amazonaws.com/nodepipeline:latest .
+      - docker push 727690074478.dkr.ecr.eu-north-1.amazonaws.com/nodepipeline:latest
