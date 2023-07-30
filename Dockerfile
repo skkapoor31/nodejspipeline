@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM public.ecr.aws/node:14
+FROM public.ecr.aws/docker/library/node:14.21.3
 
 # Set the working directory inside the container
 WORKDIR /app
